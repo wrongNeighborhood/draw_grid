@@ -8,6 +8,13 @@ div .brick{
 }
 div .wrapper{
 	display: grid;
-	grid-template-columns: 240px 240px 24s0px;
+	grid-template-columns: 240px 240px 240px;
 	
+}
+table,td {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+input {
+	margin-left: 40%;
 }
