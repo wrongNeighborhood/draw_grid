@@ -2,7 +2,7 @@ div .brick{
 	width: 85px;
 	height: 85px;
 	background-color: cyan;
-	font-size: 20px;
+	font-size: 10px;
 	font-family: Verdana;
 	/*display:block;*/
 }

@@ -10,24 +10,25 @@ $(document).ready(function(){
 		}
 		return color;
 	}
-	function createGrid(size)
+	function createGrid(size_)
 	{
 		var content = "<table>"
 		$('body').append('<div class="wrapper"></div>');
-		for(j=0;j<size;j++)
+		for(j=0;j<size_;j++)
 		{
 			content += "<tr>";
-			for(var i=0; i<size; i++)
+			for(var i=0; i<size_; i++)
 			{
 		    	content += '<td>' + 
-		    	'<div class="brick"><p><br>'+j+' '+i+'</p></div>'
+		    	'<div class="brick" style="width: '+Math.floor(683/size_)+'px;height: '+Math.floor(683/size_)+'px;"><p><br>'+j+' '+i+'</p></div>'
 		    	+'</td>';
-		    	$('.brick').css({"width":Math.floor(683/size)+"px","height": Math.floor(683/size)+"px"});
+		    	/*$('.brick').css({});*/
+		    	
 			}
 			content+="</tr>";
 		}
 		content += "</table>"
-		$('.wrapper').append(content);	
+		$('.wrapper').append(content);
 		$('.brick').mouseenter(function(){
 			$('.brick').css("background-color",getRandomColor());		
 		});
@@ -40,8 +41,7 @@ $(document).ready(function(){
 	/*var height = Math.floor($(document).height()/8);*/
 	/*$('.brick').css({"width":"85px","height":"85px"});*/
 	$('input').click(function(){
-		var number = prompt("Enter size of square");
-		/*$('body').removeClass('wrapper');*/
+		var number = prompt("Enter size of grid");
 		$('.wrapper').remove();
 		createGrid(parseInt(number));
 	});
