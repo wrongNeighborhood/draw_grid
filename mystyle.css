@@ -4,7 +4,6 @@ div .brick{
 	background-color: cyan;
 	font-size: 10px;
 	font-family: Verdana;
-	/*display:block;*/
 }
 div .wrapper{
 	display: grid;

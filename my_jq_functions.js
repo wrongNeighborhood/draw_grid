@@ -22,8 +22,6 @@ $(document).ready(function(){
 		    	content += '<td>' + 
 		    	'<div class="brick" style="width: '+Math.floor(683/size_)+'px;height: '+Math.floor(683/size_)+'px;"><p><br>'+j+' '+i+'</p></div>'
 		    	+'</td>';
-		    	/*$('.brick').css({});*/
-		    	
 			}
 			content+="</tr>";
 		}
@@ -37,9 +35,6 @@ $(document).ready(function(){
 		});
 	}
 	createGrid(size);
-	/*var width = ($(document).width())*/;
-	/*var height = Math.floor($(document).height()/8);*/
-	/*$('.brick').css({"width":"85px","height":"85px"});*/
 	$('input').click(function(){
 		var number = prompt("Enter size of grid");
 		$('.wrapper').remove();
